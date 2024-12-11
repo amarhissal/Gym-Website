@@ -1,0 +1,61 @@
+/* Background Styling */
+.background {
+    background-image: url('../../Asset/background.jpg'); /* Ensure the path is correct */
+    background-size: cover; /* Ensures the image covers the entire container */
+    background-position: center; /* Centers the background image */
+    background-repeat: no-repeat; /* Prevents tiling */
+    min-height: 100vh; /* Ensures the container is at least the full height of the viewport */
+    width: 100%; /* Ensures it spans the full width */
+    display: flex; /* Centers child elements horizontally and vertically */
+    justify-content: s;
+    align-items: center;
+  }
+  
+
+.container{
+    margin: 71px 67px;
+     padding: 25px 25px;
+     border: 2px solid white;
+     width: 33%;
+     border-radius: 28px;
+     font-size: 20px;
+     color: white;
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    
+    
+ 
+ }
+ .formgroup input{
+    font-family: 'Baloo Bhaijaan 2', cursive;
+    text-align: center;
+    display: block;
+    width: 400px;
+    padding: 1px;
+    margin: 11px auto;
+    font-size: 22px;
+    border-radius: 8px;
+ 
+ }
+ .container h1{
+    text-align: center;
+ 
+ }
+ .container button{
+  margin: 20px auto;
+ display: block;
+ width: 81%;
+ font-size: 20px;
+ font-family: 'Baloo Bhaijaan 2', cursive;
+
+ 
+ }
+
+
+ 
+ .icon{
+    text-align: center;
+    color: white;
+    margin-left:5px ;
+    margin-top: 5px;
+    font-size: 15px;
+ }

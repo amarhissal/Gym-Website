@@ -1,0 +1,86 @@
+/* AdminPage.css */
+
+.admin-page {
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    gap: 20px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  .admin-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .section-btn {
+    padding: 10px;
+    border: none;
+    background: #f4f4f4;
+    cursor: pointer;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  .section-btn.active {
+    background: #007bff;
+    color: white;
+  }
+  
+  .admin-content {
+    border: 1px solid #ddd;
+    padding: 20px;
+    background: #fff;
+  }
+  
+  .admin-content h2 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #333;
+  }
+  
+  .admin-content table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .admin-content table th,
+  .admin-content table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+  }
+  
+  .admin-content table th {
+    background: #007bff;
+    color: white;
+  }
+  
+  .admin-actions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .search-bar {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .add-btn {
+    padding: 10px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .add-btn:hover {
+    background: #0056b3;
+  }
+  

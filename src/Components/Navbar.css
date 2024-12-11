@@ -1,0 +1,119 @@
+/* General Styling */
+body {
+    margin: 0;
+    cursor: default;
+  
+  }
+
+  /* Navbar Container */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color:rgb(0, 16, 18);
+    color: #fff; /* White text */
+    padding: 10px 20px;
+    position:sticky;
+    top: 0;
+    left: 0;
+    width: 97.3%;
+    height: 70px;
+   
+   
+  }
+  
+  /* Logo Section */
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 100px; /* Adjust height as needed */
+    margin-right: 10px; /* Space between logo and text */
+  }
+  
+  .logo h2 {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin: 0;
+    font-family:'comic san ms',cursive
+  }
+  
+  /* Navigation Items */
+  .nav-items ul {
+    list-style-type: none; /* Removes default list styling */
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .nav-items ul li {
+    margin: 0 40px;
+  }
+  
+  .nav-items ul li a {
+    text-decoration: none; /* Removes underline */
+    color: #fff;
+    font-size: 1.4rem;
+    transition: color 0.3s ease; /* Smooth hover effect */
+    cursor: pointer;
+    font-family: 'Baloo Bhaijaan 2';
+  }
+  
+  .nav-items ul li a:hover,
+  .nav-items ul li a.active {
+    color:gray; /* Highlight color */
+  }
+  
+  /* Enquiry Buttons */
+  .enquiry {
+    display: flex;
+    gap: 10px; /* Space between buttons */
+    margin-right: 20px;
+  }
+  .btn{
+    margin: 0px 9px;
+    background-color: black;
+    color: white;
+    padding: 6px 18px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Baloo Bhaijaan 2';
+    ;
+ }
+  
+ .btn:hover{
+    background-color: white;
+    color: black;
+ }
+
+ .btn:hover .icon{
+    color: black;
+ }
+  .icon {
+    font-size: 1rem;
+    
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .navbar {
+      flex-wrap: wrap; /* Allows wrapping on small screens */
+    }
+  
+    .nav-items ul {
+      flex-direction: column; /* Stack items vertically */
+      align-items: center;
+    }
+  
+    .nav-items ul li {
+      margin: 10px 0; /* Adjust spacing */
+    }
+  
+    .enquiry {
+      margin-top: 10px; /* Adds spacing above buttons */
+    }
+  }
+  
