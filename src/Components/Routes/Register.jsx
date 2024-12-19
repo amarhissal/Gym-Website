@@ -4,7 +4,7 @@ function Register() {
     <>
       <div className="background">
         <div className="container">
-          <h1>Join the Best Gym now</h1>
+          <h1 cl>Join the Best Gym now</h1>
           <form action="">
             <div className="formgroup">
               <input type="text" placeholder="Enter Your Name" />

@@ -2,6 +2,7 @@ import React from "react";
 import "./AboutUs.css";
 import trainer1 from "../Asset/trainer1.png";
 import trainer2 from "../Asset/trainer2.png";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   return (
@@ -10,7 +11,9 @@ function AboutUs() {
         <div className="hero-content">
           <h1>Transforming Lives, One Workout at a Time</h1>
           {/* <p>Your fitness journey begins here. Join us today!</p> */}
-          <button className="cta-button">Join Us Now</button>
+          <Link to={"/"} className="cta-button">
+            Join Us Now
+          </Link>
         </div>
       </div>
 

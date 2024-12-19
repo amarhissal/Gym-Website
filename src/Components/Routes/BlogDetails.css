@@ -1,0 +1,48 @@
+
+.blog--detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    min-height: 100vh;
+    background-color: #101010;
+    padding: 20px;
+}
+
+.blog--card {
+    background: #1c1c1c;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.blog--title {
+    font-size: 2rem;
+    color: #f0ad4e;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.blog--image {
+    max-width: 80%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+.blog--description {
+    font-size: 1.2rem;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+    color: white;
+}
+
+.blog--content {
+    font-size: 1rem;
+    color: #444;
+    line-height: 1.6;
+    color: white;
+}

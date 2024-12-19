@@ -7,7 +7,9 @@ function Navbar() {
       <header className="navbar">
         <div className="logo">
           <img src={logoImage} alt="Your Fitness" />
-          <h2>Your Fitness</h2>
+          <NavLink className="navlink" to={"/"}>
+            <h2>Your Fitness</h2>
+          </NavLink>
         </div>
         <div className="nav-items">
           <ul className="nav-ul">

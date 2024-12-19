@@ -2,9 +2,12 @@
 body {
     margin: 0;
     cursor: default;
+    
   
   }
 
+  .navlink{text-decoration: none;
+color: white;}
   /* Navbar Container */
   .navbar {
     display: flex;

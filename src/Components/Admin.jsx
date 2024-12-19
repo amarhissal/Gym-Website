@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Admin.css";
+import { Link } from "react-router-dom";
 
 export default function AdminPage() {
   const [selectedSection, setSelectedSection] = useState("users");
@@ -28,7 +29,6 @@ export default function AdminPage() {
   }, []);
 
   useEffect(() => {
-    // Populate filteredUsers with all users when the component mounts
     setFilteredUSers(users);
     setFilteredBlogs(blogs);
   }, [users, blogs]);
@@ -58,6 +58,27 @@ export default function AdminPage() {
     }
   }
 
+  async function deleteUSer(id) {
+    const resData = await fetch("http://localhost:5000/users/" + id, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+    const result = await resData.json();
+    console.log(result.message);
+    const deletedUsers = filteredUsers.filter((u) => u._id !== id);
+    setFilteredUSers(deletedUsers);
+  }
+  async function deleteBlog(id) {
+    const resData = await fetch("http://localhost:5000/blogs/" + id, {
+      method: "DELETE",
+      headers: { "Content-Type": "application/json" },
+    });
+    const result = await resData.json();
+    console.log(result.message);
+    const deletedBlogs = filteredBlogs.filter((u) => u._id !== id);
+    setFilteredBlogs(deletedBlogs);
+  }
+
   const renderTable = () => {
     switch (selectedSection) {
       case "users":
@@ -74,13 +95,18 @@ export default function AdminPage() {
             </thead>
             <tbody>
               {filteredUsers.map((user) => (
-                <tr>
+                <tr key={user.id}>
                   <td>{user.name}</td>
                   <td>{user.email}</td>
                   <td>{user.plan}</td>
                   <td>{user.age}</td>
                   <td>
-                    <button>Delete</button>
+                    <button
+                      onClick={() => deleteUSer(user._id)}
+                      className="delete-btn"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}
@@ -99,11 +125,20 @@ export default function AdminPage() {
             </thead>
             <tbody>
               <tr>
-                <td>Basic</td>
-                <td>$10</td>
+                <td>Platinum</td>
+                <td>2000</td>
+                <td>Access to gym with trainer</td>
+              </tr>
+              <tr>
+                <td>Gold</td>
+                <td>1500</td>
+                <td>Access to gym </td>
+              </tr>
+              <tr>
+                <td>Silver</td>
+                <td>100</td>
                 <td>Access to gym</td>
               </tr>
-              {/* Add more rows */}
             </tbody>
           </table>
         );
@@ -121,17 +156,21 @@ export default function AdminPage() {
             </thead>
             <tbody>
               {filteredBlogs.map((blog) => (
-                <tr>
+                <tr key={blog.id}>
                   <td>{blog.title}</td>
                   <td>{blog.description}</td>
                   <td>{blog.image}</td>
                   <td>{blog.content}</td>
                   <td>
-                    <button>Delete</button>
+                    <button
+                      onClick={() => deleteBlog(blog._id)}
+                      className="delete-btn"
+                    >
+                      Delete
+                    </button>
                   </td>
                 </tr>
               ))}
-              {/* Add more rows */}
             </tbody>
           </table>
         );
@@ -160,21 +199,27 @@ export default function AdminPage() {
       <div className="admin-content">
         <h2>
           {selectedSection.charAt(0).toUpperCase() + selectedSection.slice(1)}{" "}
-          Table
         </h2>
         {renderTable()}
       </div>
 
-      {/* Right Section */}
-      <div className="admin-actions">
-        <input
-          type="text"
-          placeholder={`Search in ${selectedSection}...`}
-          className="search-bar"
-          onChange={handleChange}
-        />
-        <button className="add-btn">Add New {selectedSection}</button>
-      </div>
+      {selectedSection !== "plans" && (
+        <div className="admin-actions">
+          <input
+            type="text"
+            placeholder={`Search in ${selectedSection}...`}
+            className="search-bar"
+            onChange={handleChange}
+          />
+
+          <Link
+            to={selectedSection === "users" ? "new-user" : "new-blog"}
+            className="add-btn"
+          >
+            Add New {selectedSection}
+          </Link>
+        </div>
+      )}
     </div>
   );
 }

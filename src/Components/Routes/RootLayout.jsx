@@ -3,12 +3,12 @@ import { Outlet } from "react-router-dom";
 
 function RootLayout() {
   return (
-    <>
+    <div>
       <Navbar></Navbar>
       <main>
         <Outlet></Outlet>
       </main>
-    </>
+    </div>
   );
 }
 

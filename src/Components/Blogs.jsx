@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import "./Blogs.css";
+import { Link } from "react-router-dom";
 
 function Blogs() {
   const [blogs, setBlogs] = useState([]);
@@ -18,7 +19,7 @@ function Blogs() {
       <h1 className="blogs-title">Fitness Blogs</h1>
       <div className="blogs-grid">
         {blogs.map((blog, index) => (
-          <div className="blog-card" key={index}>
+          <Link className="blog-card" to={"/blogs/" + blog._id} key={index}>
             <img
               src={`http://localhost:3000/images/${blog.image}.png`}
               alt={blog.image}
@@ -28,7 +29,7 @@ function Blogs() {
               <h2 className="blog-title">{blog.title}</h2>
               <p className="blog-description">{blog.description}</p>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
     </div>

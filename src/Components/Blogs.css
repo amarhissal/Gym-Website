@@ -1,6 +1,7 @@
-/* FitnessBlogs.css */
 
-/* General Styling */
+a{
+    text-decoration: none;
+}
 .blogs-container {
     font-family: "Arial", sans-serif;
     color: #fff;
