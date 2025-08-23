@@ -46,15 +46,20 @@
     font-size: 1.2rem;
     border: none;
     border-radius: 5px;
+    transition: letter-spacing 0.2s ease, transform 0.2s ease;
     cursor: pointer;
   }
   
   .cta-button:hover {
-    background-color:white;
-    color: black;
-    border: 2px solid gray;
+
+    letter-spacing: 4px; /* Increase letter spacing */
+    transform: scale(1.1);
+ 
   }
   
+  .cta-button:active{
+    transform: scale(1.05); 
+  }
   .mission-section,
   .why-choose-us,
   .trainers-section {
@@ -113,6 +118,12 @@
     border-radius: 10px;
     text-align: center;
     width: 30%;
+    transition: 2s ease-in-out;
+  }
+
+  .trainer-card:hover{
+    transform: rotateY(360deg);
+
   }
   
   .trainer-card img {

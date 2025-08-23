@@ -16,6 +16,8 @@
     width: 100%;
     padding: 20px;
     overflow: hidden;
+    animation: slideUp 1s ease;
+
 }
 
 .blog--title {
@@ -46,3 +48,17 @@
     line-height: 1.6;
     color: white;
 }
+@keyframes slideUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .back-to-btn{
+    font-weight: bold;
+  }

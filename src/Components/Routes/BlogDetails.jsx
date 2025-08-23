@@ -33,7 +33,9 @@ function BlogDetails() {
                 <p key={index}>{paragraph}</p>
               ))}
             </div>
-            <Link to={"/blogs"}>Back to Blogs</Link>
+            <Link className="back-to-btn" to={"/blogs"}>
+              &lt;- Back to Blogs
+            </Link>
           </div>
         </div>
       )}

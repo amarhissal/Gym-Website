@@ -25,6 +25,10 @@
     
  
  }
+
+
+
+
  .formgroup input{
     font-family: 'Baloo Bhaijaan 2', cursive;
     text-align: center;
@@ -40,16 +44,26 @@
     text-align: center;
  
  }
- .container button{
+ .btn-submit{
   margin: 20px auto;
  display: block;
  width: 81%;
  font-size: 20px;
  font-family: 'Baloo Bhaijaan 2', cursive;
+ background-color: black;
+ color: white;
+ border-radius: 8px;
+
 
  
  }
 
+ .btn-submit:hover{
+   transform: scale(1.4rem);
+   color:black;
+   background-color: white;
+  
+ }
 
  
  .icon{

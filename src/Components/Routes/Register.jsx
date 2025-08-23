@@ -19,7 +19,7 @@ function Register() {
               <input type="text" placeholder="Enter Your Phone No." />
             </div>
           </form>
-          <button className="btn">Submit</button>
+          <button className="btn-submit">Submit</button>
         </div>
       </div>
     </>
