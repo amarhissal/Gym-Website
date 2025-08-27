@@ -16,7 +16,7 @@ function BlogDetails() {
       setBlog(blogdetail);
     }
     fetchBlogDetails();
-  }, []);
+  }, [id]);
 
   return (
     <>

@@ -1,6 +1,5 @@
 import Modal from "./Modal";
 import { Form } from "react-router-dom";
-import { redirect } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 function NewBlog() {
   const navigate = useNavigate();
