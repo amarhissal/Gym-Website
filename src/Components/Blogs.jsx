@@ -7,7 +7,9 @@ function Blogs() {
 
   useEffect(() => {
     async function fetchBlogs() {
-      const resData = await fetch("http://localhost:5000/blogs");
+      const resData = await fetch(
+        "https://gym-backend-t10t.onrender.com/blogs"
+      );
       const blogs = await resData.json();
       setBlogs(blogs);
     }
@@ -21,7 +23,7 @@ function Blogs() {
         {blogs.map((blog, index) => (
           <Link className="blog-card" to={"/blogs/" + blog._id} key={index}>
             <img
-              src={`http://localhost:3000/images/${blog.image}.png`}
+              src={`/images/${blog.image}.png`}
               alt={blog.image}
               className="blog-image"
             />

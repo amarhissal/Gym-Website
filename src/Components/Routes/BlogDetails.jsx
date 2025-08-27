@@ -9,7 +9,9 @@ function BlogDetails() {
 
   useEffect(() => {
     async function fetchBlogDetails() {
-      const resData = await fetch("http://localhost:5000/blogs/" + id);
+      const resData = await fetch(
+        "https://gym-backend-t10t.onrender.com/blogs/" + id
+      );
       const blogdetail = await resData.json();
       setBlog(blogdetail);
     }
@@ -23,7 +25,7 @@ function BlogDetails() {
           <div className="blog--card">
             <h1 className="blog--title">{blog.title}</h1>
             <img
-              src={`http://localhost:3000/images/${blog.image}.png`}
+              src={`/images/${blog.image}.png`}
               alt="Blog"
               className="blog-image"
             />

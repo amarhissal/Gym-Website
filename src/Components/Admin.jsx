@@ -12,7 +12,9 @@ export default function AdminPage() {
 
   useEffect(() => {
     async function fetchUser() {
-      const resData = await fetch("http://localhost:5000/users");
+      const resData = await fetch(
+        "https://gym-backend-t10t.onrender.com/users"
+      );
       const users = await resData.json();
       setUsers(users);
     }
@@ -21,7 +23,9 @@ export default function AdminPage() {
 
   useEffect(() => {
     async function fetchBlogs() {
-      const resData = await fetch("http://localhost:5000/blogs");
+      const resData = await fetch(
+        "https://gym-backend-t10t.onrender.com/blogs"
+      );
       const blogs = await resData.json();
       setBlogs(blogs);
     }
@@ -59,20 +63,26 @@ export default function AdminPage() {
   }
 
   async function deleteUSer(id) {
-    const resData = await fetch("http://localhost:5000/users/" + id, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-    });
+    const resData = await fetch(
+      "https://gym-backend-t10t.onrender.com/users/" + id,
+      {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     const result = await resData.json();
     console.log(result.message);
     const deletedUsers = filteredUsers.filter((u) => u._id !== id);
     setFilteredUSers(deletedUsers);
   }
   async function deleteBlog(id) {
-    const resData = await fetch("http://localhost:5000/blogs/" + id, {
-      method: "DELETE",
-      headers: { "Content-Type": "application/json" },
-    });
+    const resData = await fetch(
+      "https://gym-backend-t10t.onrender.com/blogs/" + id,
+      {
+        method: "DELETE",
+        headers: { "Content-Type": "application/json" },
+      }
+    );
     const result = await resData.json();
     console.log(result.message);
     const deletedBlogs = filteredBlogs.filter((u) => u._id !== id);

@@ -15,7 +15,7 @@ function NewBlog() {
     const formData = new FormData(e.target);
     const data = Object.fromEntries(formData);
 
-    const resData = await fetch("http://localhost:5000/blogs", {
+    const resData = await fetch("https://gym-backend-t10t.onrender.com/blogs", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
