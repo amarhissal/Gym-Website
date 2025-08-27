@@ -1,6 +1,6 @@
 import "./NewUser.css"; // Include the updated CSS file
 import Modal from "../Modal";
-import { Form, redirect } from "react-router-dom";
+import { Form } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 const NewUser = () => {
